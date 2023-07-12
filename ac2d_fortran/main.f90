@@ -23,6 +23,9 @@ program main
     real(dp) :: t1, t2
 
 
+    call system('mkdir -p pressure/')
+
+
     p(:, :, :) = 0.0_dp
     c(:, :) = c0
     stf(:) = 0.0_dp
