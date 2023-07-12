@@ -3,6 +3,8 @@
 #include <math.h>
 #include <string.h>
 #include <stdbool.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 
 void fd2d(float *p, const int nx, const int nz, const float dx, const float dz,
@@ -112,6 +114,8 @@ int main() {
 #define t0 0.01
 #define f0 100.0
 #define c0 3000.0
+
+    int res = mkdir("pressure", 0777);
 
     float c[nx*nz];
     float p[nx*nz];
